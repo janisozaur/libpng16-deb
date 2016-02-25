@@ -19,7 +19,7 @@ clean:
 
 compile:
 	mkdir $(TEMP) || true
-	curl -O -z libpng-$(VERSION).tar.xz ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng16/libpng-$(VERSION).tar.xz
+	curl -O -z libpng-$(VERSION).tar.xz http://netix.dl.sourceforge.net/project/libpng/libpng16/$(VERSION)/libpng-$(VERSION).tar.xz
 	tar xf libpng-$(VERSION).tar.xz
 	cd libpng-$(VERSION) && ./configure --prefix=/usr/local --disable-static
 	cd libpng-$(VERSION) && $(MAKE)
